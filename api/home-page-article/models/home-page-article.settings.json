@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_page_articles",
+  "info": {
+    "name": "HomePageArticle",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "articlePhoto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "articleContent": {
+      "type": "richtext"
+    },
+    "alignToRight": {
+      "type": "boolean"
+    },
+    "order": {
+      "required": true,
+      "default": 0,
+      "type": "integer",
+      "min": 0
+    }
+  }
+}

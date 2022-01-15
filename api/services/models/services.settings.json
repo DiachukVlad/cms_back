@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "services"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "reservations": {
+      "via": "services",
+      "collection": "reservations"
+    },
+    "specialists": {
+      "via": "services",
+      "collection": "specialist"
+    }
+  }
+}

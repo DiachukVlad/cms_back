@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "name": "reservations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date_from": {
+      "type": "datetime"
+    },
+    "date_to": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "reservations"
+    },
+    "car": {
+      "model": "cars",
+      "via": "reservations"
+    },
+    "services": {
+      "collection": "services",
+      "via": "reservations",
+      "dominant": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Finished",
+        "Pending"
+      ]
+    }
+  }
+}

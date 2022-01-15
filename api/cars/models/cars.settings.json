@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "name": "Cars",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "car_number": {
+      "type": "string"
+    },
+    "vin": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "cars"
+    },
+    "reservations": {
+      "via": "car",
+      "collection": "reservations"
+    }
+  }
+}
