@@ -22,8 +22,8 @@
       "type": "boolean"
     },
     "services": {
-      "collection": "services",
       "via": "specialists",
+      "collection": "services",
       "dominant": true
     }
   }

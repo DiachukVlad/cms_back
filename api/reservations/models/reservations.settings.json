@@ -12,11 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "date_from": {
-      "type": "datetime"
-    },
-    "date_to": {
-      "type": "datetime"
+    "date": {
+      "type": "date"
     },
     "user": {
       "plugin": "users-permissions",
@@ -27,11 +24,6 @@
       "model": "cars",
       "via": "reservations"
     },
-    "services": {
-      "collection": "services",
-      "via": "reservations",
-      "dominant": true
-    },
     "status": {
       "type": "enumeration",
       "enum": [
@@ -39,6 +31,12 @@
         "Finished",
         "Pending"
       ]
+    },
+    "time": {
+      "type": "time"
+    },
+    "specialist": {
+      "model": "specialist"
     }
   }
 }
